@@ -74,3 +74,21 @@ git config --global user.name "Jeganathan Swaminathan"
 git config --global user.email "mail2jegan@gmail.com"
 
 ```
+
+Expected output
+<pre>
+jegan@tektutor.org:~$ mkdir -p git-demo
+jegan@tektutor.org:~$ cd git-demo
+jegan@tektutor.org:~/git-demo$ ls
+
+jegan@tektutor.org:~/git-demo$ git config --global user.name "Jeganathan Swaminathan"
+jegan@tektutor.org:~/git-demo$ git config --global user.email "mail2jegan@gmail.com"
+
+jegan@tektutor.org:~/git-demo$ git config --global --list
+credential.helper=cache --timeout=9999999999
+pull.rebase=false
+core.editor=vim
+user.name=Jeganathan Swaminathan
+user.email=mail2jegan@gmail.com
+init.defaultbranch=main
+</pre>
