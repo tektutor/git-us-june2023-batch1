@@ -32,3 +32,30 @@ git clone https://github.com/tektutor/git-us-june2023-batch1.git
 cd git-us-june2023-batch1
 ```
 
+## Types of Version Control System 
+1. Local Version Control System (LVCS)
+2. Centralized Version Control System (CVCS)
+3. Distributed Version Control System (DVCS)
+
+
+#### Local Version Control System
+
+#### Centralized Version Control System (CVCS)
+- follows client/server architecture
+- Example
+  - Perforce
+  - p4/p4v client tool
+  - perforce server tool
+- Advantages
+  - multi-user, hence all team members would be collaborate
+- Disadvantages
+  - doesn't support working offline
+ 
+#### Distributed Version Control System (DVCS)
+- Example
+  - Git/GitHub
+- Git Overview
+  - opensource tool developed by Linus Torvalds
+- Advantages
+  - multi-user
+  - can work offline unlike CVCS(eg: Perforce)
