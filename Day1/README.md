@@ -92,3 +92,16 @@ user.name=Jeganathan Swaminathan
 user.email=mail2jegan@gmail.com
 init.defaultbranch=main
 </pre>
+
+
+## Lab - Creating a local Git repository
+```
+cd ~
+mkdir -p git-demo
+cd git-demo
+git init
+
+git config --local user.name "Nitesh Jeganathan"
+git config --local user.email "mail2nitesh@gmail.com"
+```
+
