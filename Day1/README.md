@@ -59,3 +59,18 @@ cd git-us-june2023-batch1
 - Advantages
   - multi-user
   - can work offline unlike CVCS(eg: Perforce)
+
+
+# Git Commands
+
+## Checking version
+```
+git --version
+```
+
+## Perform some basic git configurations
+```
+git config --global user.name "Jeganathan Swaminathan"
+git config --global user.email "mail2jegan@gmail.com"
+
+```
