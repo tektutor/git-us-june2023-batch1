@@ -72,7 +72,7 @@ git --version
 ```
 git config --global user.name "Jeganathan Swaminathan"
 git config --global user.email "mail2jegan@gmail.com"
-
+git config --global core.editor vim
 ```
 
 Expected output
