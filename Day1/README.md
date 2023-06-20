@@ -20,9 +20,15 @@ sudo yum install -y epel-release && sudo yum -y install git
 sudo dnf install git
 ```
 
+## Check your git version
+```
+git --version
+```
+
 ## 🔖 How to clone this repository from Git Bash CLI ?
 ```
 cd ~
 git clone https://github.com/tektutor/git-us-june2023-batch1.git
 cd git-us-june2023-batch1
 ```
+
