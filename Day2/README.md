@@ -1,5 +1,9 @@
 # Day 2
 
+## Lab - For windows participants
+```
+git config --global core.autocrlf true
+```
 
 
 ## Lab - Renaming a branch
