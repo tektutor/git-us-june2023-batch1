@@ -216,3 +216,19 @@ jegan@tektutor.org:~/git-demo$ git commit -m "Added a new car.txt file."
  create mode 100644 cars.txt
 </pre>
 ![Git commit](git-commit.png)
+
+## Lab - Checking logs
+```
+cd ~/git-demo
+git log
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git log
+commit 09d6bae4e29de0bd7ac95a727a37a3056fb1d0d2 (HEAD -> main)
+Author: Nitesh Jeganathan <mail2nitesh@gmail.com>
+Date:   Wed Jun 21 05:17:12 2023 +0530
+
+    Added a new car.txt file.
+</pre>
