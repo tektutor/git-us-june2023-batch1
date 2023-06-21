@@ -1,12 +1,12 @@
 # Day 2
 
-## Lab - For windows participants
+## ⛹️‍♂️ Lab - For windows participants
 ```
 git config --global core.autocrlf true
 ```
 
 
-## Lab - Renaming a branch
+## ⛹️‍♂️ Lab - Renaming a branch
 
 By default git creates master branch when we create new repository locally.
 
@@ -75,7 +75,7 @@ git log # Listing detailed log - commit history
 git log --oneline
 ```
 
-## Lab - Some additional options you may find it interesting in logs
+## ⛹️‍♂️ Lab - Some additional options you may find it interesting in logs
 ```
 git log -p -2
 git log --stat
@@ -100,7 +100,7 @@ The possible specifiers
 %s - commit message
 </pre>
 
-## Git tags
+## ⛹️‍♂️ Lab - Git tags
 
 Git supports two types of tags
 1. Lightweight tag - Git doesn't require creating a separated for lightweight tags
