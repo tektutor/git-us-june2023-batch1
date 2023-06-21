@@ -215,3 +215,4 @@ jegan@tektutor.org:~/git-demo$ git commit -m "Added a new car.txt file."
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 cars.txt
 </pre>
+![Git commit](git-commit.png)
