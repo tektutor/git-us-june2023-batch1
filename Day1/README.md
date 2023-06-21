@@ -68,7 +68,7 @@ cd git-us-june2023-batch1
 git --version
 ```
 
-## Perform some basic git configurations
+##  ⛹️ Lab - Perform some basic git configurations
 ```
 git config --global user.name "Jeganathan Swaminathan"
 git config --global user.email "mail2jegan@gmail.com"
@@ -94,7 +94,7 @@ init.defaultbranch=main
 </pre>
 
 
-## Lab - Creating a local Git repository
+## ⛹️ Lab - Creating a local Git repository
 ```
 cd ~
 mkdir -p git-demo
@@ -107,7 +107,7 @@ git config --local user.email "mail2nitesh@gmail.com"
 
 Expected output
 
-## ⛹️ Removing global configurations
+## ⛹️ Lab - Removing global configurations
 The global git configurations are stored under user home .gitconfig file
 
 ```
@@ -138,7 +138,7 @@ core.bare=false
 core.logallrefupdates=true
 </pre>
 
-## Staging a file and committing it into the local Git repo
+## ⛹️ Lab - Staging a file and committing it into the local Git repo
 ```
 cd ~
 cd git-demo
@@ -215,4 +215,3 @@ jegan@tektutor.org:~/git-demo$ git commit -m "Added a new car.txt file."
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 cars.txt
 </pre>
-
