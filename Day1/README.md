@@ -1,7 +1,5 @@
 # Day 1
 
-# Day 1
-
 ## 📌 Installing Git in Windows
 <pre>
 https://gitforwindows.org/
