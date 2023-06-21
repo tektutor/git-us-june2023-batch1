@@ -95,7 +95,7 @@ The possible specifiers
 <pre>
 %H - Full lenght of commit id
 %h - shorter commit id
-%an - autghor name
+%an - author name
 %ae - author email
 %s - commit message
 </pre>
