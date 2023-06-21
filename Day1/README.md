@@ -232,3 +232,41 @@ Date:   Wed Jun 21 05:17:12 2023 +0530
 
     Added a new car.txt file.
 </pre>
+
+## Lab - Attaching a tag to every commit id
+```
+cd ~/git-demo
+git log
+git tag v0.1 09d6bae4e29de0bd7ac95a727a37a3056fb1d0d2
+git tag v0.2 760466f6e6b430fa7761ad3e422e7365c9a44b40
+git log
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git log
+commit 760466f6e6b430fa7761ad3e422e7365c9a44b40 (HEAD -> main)
+Author: Nitesh Jeganathan <mail2nitesh@gmail.com>
+Date:   Wed Jun 21 06:05:43 2023 +0530
+
+    Added BMW X1 to cars.txt
+
+commit 09d6bae4e29de0bd7ac95a727a37a3056fb1d0d2 (tag: v0.1)
+Author: Nitesh Jeganathan <mail2nitesh@gmail.com>
+Date:   Wed Jun 21 05:17:12 2023 +0530
+
+    Added a new car.txt file.
+jegan@tektutor.org:~/git-demo$ git tag v0.2 760466f6e6b430fa7761ad3e422e7365c9a44b40
+jegan@tektutor.org:~/git-demo$ git log
+commit 760466f6e6b430fa7761ad3e422e7365c9a44b40 (HEAD -> main, tag: v0.2)
+Author: Nitesh Jeganathan <mail2nitesh@gmail.com>
+Date:   Wed Jun 21 06:05:43 2023 +0530
+
+    Added BMW X1 to cars.txt
+
+commit 09d6bae4e29de0bd7ac95a727a37a3056fb1d0d2 (tag: v0.1)
+Author: Nitesh Jeganathan <mail2nitesh@gmail.com>
+Date:   Wed Jun 21 05:17:12 2023 +0530
+
+    Added a new car.txt file.
+</pre>
