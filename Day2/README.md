@@ -34,7 +34,7 @@ nothing to commit (create/copy files and use "git add" to track)
  
 </pre>
 
-## Git logs
+## ⛹️‍♂️ Lab - Git logs
 ```
 cd ~
 mkdir git-demo
