@@ -31,3 +31,11 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
  
 </pre>
+
+## Git tags
+
+Git supports two types of tags
+1. Lightweight tag - Git doesn't require creating a separated for lightweight tags
+2. Annotated tag - recommended - 
+
+
