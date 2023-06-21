@@ -75,6 +75,31 @@ git log # Listing detailed log - commit history
 git log --oneline
 ```
 
+## Lab - Some additional options you may find it interesting in logs
+```
+git log -p -2
+git log --stat
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+git log --pretty=fuller
+git log --pretty=format:"%h - %an %ar %s"
+git log --pretty=format:"%h %s" --graph
+git log --since=2.weeks
+git log --oneline --decorate
+
+git log --pretty="%h - %s" --author="Jeganathan Swaminathan" --since="2023-06-18" --before="2023-06-22"
+```
+
+The possible specifiers
+<pre>
+%H - Full lenght of commit id
+%h - shorter commit id
+%an - autghor name
+%ae - author email
+%s - commit message
+</pre>
+
 ## Git tags
 
 Git supports two types of tags
