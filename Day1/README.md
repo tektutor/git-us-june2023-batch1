@@ -106,3 +106,35 @@ git config --local user.email "mail2nitesh@gmail.com"
 ```
 
 Expected output
+
+## ⛹️ Removing global configurations
+The global git configurations are stored under user home .gitconfig file
+
+```
+git config --unset --global user.email
+git config --unset --global user.name
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git config --list
+credential.helper=cache --timeout=9999999999
+user.email=mail2jegan@gmail.com
+pull.rebase=false
+core.editor=vim
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+
+jegan@tektutor.org:~/git-demo$ git config --unset --global user.email
+jegan@tektutor.org:~/git-demo$ git config --list
+credential.helper=cache --timeout=9999999999
+pull.rebase=false
+core.editor=vim
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+</pre>
+
