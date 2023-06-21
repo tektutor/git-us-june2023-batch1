@@ -138,3 +138,81 @@ core.bare=false
 core.logallrefupdates=true
 </pre>
 
+## Staging a file and committing it into the local Git repo
+```
+cd ~
+cd git-demo
+git status
+touch cars.txt
+git status
+git add cars.txt
+git status
+git commit -m "Added cars.txt new file into the local git repo."
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+jegan@tektutor.org:~/git-demo$ ls
+jegan@tektutor.org:~/git-demo$ ls -lha
+total 12K
+drwxrwxr-x  3 jegan jegan 4.0K Jun 21 05:04 .
+drwxr-x--- 39 jegan jegan 4.0K Jun 21 05:06 ..
+drwxrwxr-x  7 jegan jegan 4.0K Jun 21 05:07 .git
+jegan@tektutor.org:~/git-demo$ touch cars.txt
+jegan@tektutor.org:~/git-demo$ ls -l
+total 0
+-rw-rw-r-- 1 jegan jegan 0 Jun 21 05:07 cars.txt
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+jegan@tektutor.org:~/git-demo$ git add cars.txt 
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   cars.txt
+
+jegan@tektutor.org:~/git-demo$ git rm --cached cars.txt 
+rm 'cars.txt'
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+jegan@tektutor.org:~/git-demo$ git add .
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   cars.txt
+
+jegan@tektutor.org:~/git-demo$ git commit -m "Added a new car.txt file."
+[main (root-commit) 09d6bae] Added a new car.txt file.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cars.txt
+</pre>
+
