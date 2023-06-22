@@ -131,7 +131,7 @@ jegan@tektutor.org:~/git-demo$ git log --oneline
 31c912e (tag: v0.3) Added BMW X2
 f4ea00b (tag: v0.2) Added BMW X1
 19bd207 (tag: v0.1) Initial commit.
-
+</pre>
 
 #### Listing tags
 ```
