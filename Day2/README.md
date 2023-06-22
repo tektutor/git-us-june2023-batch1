@@ -230,9 +230,11 @@ git tag
 git log --oneline
 ```
 
+Expected output
 <pre>
 jegan@tektutor.org:~/git-demo$ git tag -d v0.1
 Deleted tag 'v0.1' (was 952ac8c)
+ 
 jegan@tektutor.org:~/git-demo$ git tag -d v0.2 v0.3 v0.4 v0.5
 Deleted tag 'v0.2' (was 291d775)
 Deleted tag 'v0.3' (was 5265ba9)
