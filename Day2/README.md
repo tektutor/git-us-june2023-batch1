@@ -104,7 +104,7 @@ The possible specifiers
 
 Git supports two types of tags
 1. Lightweight tag - Git doesn't require creating a separated for lightweight tags
-2. Annotated tag - recommended - 
+2. Annotated tag - Git creates an object entry under .git/object folder to store detailed tag details. This is recommended
 
 #### Creating a lightweight tag
 ```
@@ -172,7 +172,9 @@ jegan@tektutor.org:~/git-demo$ git tag -d v0.4
 Deleted tag 'v0.4' (was 6e73019)
 jegan@tektutor.org:~/git-demo$ git tag -d v0.5
 Deleted tag 'v0.5' (was 5044009)
+ 
 jegan@tektutor.org:~/git-demo$ git tag
+ 
 jegan@tektutor.org:~/git-demo$ git log --oneline
 5044009 (HEAD -> main) Added BMW X4
 6e73019 Added BMW X3
