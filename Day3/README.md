@@ -18,7 +18,7 @@ rm -rf .git
 rm *
 
 git config --global init.defaultbranch main
-git config --global core.autocrlf true
+git config --global core.autocrlf true # Recommended especially for windows users
 git config --global -l
 git init
 
