@@ -283,3 +283,42 @@ f4ea00b (tag: v0.2) Added BMW X1
 19bd207 (tag: v0.1) Initial commit.
 jegan@tektutor.org:~/git-demo$ vim cars.txt  
 </pre>
+
+## Lab - Ammending the last commit
+
+In case you wish to change the commit message on the latest commit and/or wish to add an additional source file part of the same commit, you could git commit ammend.
+
+```
+git status
+git log --oneline
+git commit --amend
+git log --oneline
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+nothing to commit, working tree clean
+	
+jegan@tektutor.org:~/git-demo$ git log --oneline
+642cc02 (HEAD -> main) Undone the commit with tag v0.5 commit id 5044009
+5044009 (tag: v0.5) Added BMW X4
+6e73019 (tag: v0.4) Added BMW X3
+31c912e (tag: v0.3) Added BMW X2
+f4ea00b (tag: v0.2) Added BMW X1
+19bd207 (tag: v0.1) Initial commit.
+	
+jegan@tektutor.org:~/git-demo$ git commit --amend
+[main 9c223c6] Undone the commit 5044009 that has a tag v0.5
+ Date: Thu Jun 22 06:04:16 2023 +0530
+ 1 file changed, 1 deletion(-)
+	
+jegan@tektutor.org:~/git-demo$ git log --oneline
+9c223c6 (HEAD -> main) Undone the commit 5044009 that has a tag v0.5
+5044009 (tag: v0.5) Added BMW X4
+6e73019 (tag: v0.4) Added BMW X3
+31c912e (tag: v0.3) Added BMW X2
+f4ea00b (tag: v0.2) Added BMW X1
+19bd207 (tag: v0.1) Initial commit.
+</pre>
