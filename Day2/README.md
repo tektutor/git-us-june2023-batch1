@@ -243,7 +243,7 @@ Deleted tag 'v0.4' (was 2002c00)
 Deleted tag 'v0.5' (was 7397bdc)
 </pre>
 
-## Lab - Undo a commit from git repo
+## ⛹️‍♂️ Lab - Undo a commit from git repo
 ```
 git log --oneline
 git restore --source 6e73019 cars.txt # Any commit that comes after this commit with id 6e73019 will be deleted
