@@ -242,3 +242,44 @@ Deleted tag 'v0.3' (was 5265ba9)
 Deleted tag 'v0.4' (was 2002c00)
 Deleted tag 'v0.5' (was 7397bdc)
 </pre>
+
+## Lab - Undo a commit from git repo
+```
+git log --oneline
+git restore --source 6e73019 cars.txt # Any commit that comes after this commit with id 6e73019 will be deleted
+git status
+
+git commit -am "Removed the commit 5044009 with tag v0.5"
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git log --oneline
+5044009 (HEAD -> main, tag: v0.5) Added BMW X4
+6e73019 (tag: v0.4) Added BMW X3
+31c912e (tag: v0.3) Added BMW X2
+f4ea00b (tag: v0.2) Added BMW X1
+19bd207 (tag: v0.1) Initial commit.
+jegan@tektutor.org:~/git-demo$ git restore --source 6e73019 cars.txt
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jegan@tektutor.org:~/git-demo$ vim cars.txt 
+jegan@tektutor.org:~/git-demo$ git commit -am "Undone the commit with tag v0.5 commit id 5044009"
+[main 642cc02] Undone the commit with tag v0.5 commit id 5044009
+ 1 file changed, 1 deletion(-)
+   
+jegan@tektutor.org:~/git-demo$ git log --oneline
+642cc02 (HEAD -> main) Undone the commit with tag v0.5 commit id 5044009
+5044009 (tag: v0.5) Added BMW X4
+6e73019 (tag: v0.4) Added BMW X3
+31c912e (tag: v0.3) Added BMW X2
+f4ea00b (tag: v0.2) Added BMW X1
+19bd207 (tag: v0.1) Initial commit.
+jegan@tektutor.org:~/git-demo$ vim cars.txt  
+</pre>
