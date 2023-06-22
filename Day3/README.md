@@ -32,16 +32,16 @@ git commit -am "Added Line 1 in file1.txt"
 echo "Line 1" > file2.txt
 git commit -am "Added Line 1 in file2.txt"
 
-echo "Line 2" > file2.txt
+echo "Line 2" >> file2.txt
 git commit -am "Added Line 2 in file2.txt"
 
 echo "Line 1" > file3.txt
 git commit -am "Added Line 1 in file3.txt"
 
-echo "Line 2" > file3.txt
+echo "Line 2" >> file3.txt
 git commit -am "Added Line 2 in file3.txt"
 
-echo "Line 3" > file3.txt
+echo "Line 3" >> file3.txt
 git commit -am "Added Line 3 in file3.txt"
 
 git log --oneline
@@ -49,4 +49,55 @@ git log --oneline
 
 
 <pre>
+918df8a (HEAD -> main) Added Line 3 in file3.txt
+d3f5fe4 Added Line 2 in file3.txt
+5545ed5 Added Line 1 in file3.txt
+41b8335 Added Line 2 in file2.txt
+7d47706 Added Line 1 in file2.txt
+155e471 Added Line 1 in file1.txt
+cbdcb8d Initial commit.
+
+jegan@tektutor.org:~/git-demo$ git reset --soft d3f5fe4
+jegan@tektutor.org:~/git-demo$ cat file3.txt 
+Line 1
+Line 2
+Line 3
+  
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   file3.txt
+</pre>    
+
+#### Performing a soft reset
+
+<pre>
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+nothing to commit, working tree clean
+jegan@tektutor.org:~/git-demo$ git log --oneline
+d3f5fe4 (HEAD -> main) Added Line 2 in file3.txt
+5545ed5 Added Line 1 in file3.txt
+41b8335 Added Line 2 in file2.txt
+7d47706 Added Line 1 in file2.txt
+155e471 Added Line 1 in file1.txt
+cbdcb8d Initial commit.
+jegan@tektutor.org:~/git-demo$ cat file3.txt 
+Line 1
+Line 2
+  
+jegan@tektutor.org:~/git-demo$ git reset --hard 5545ed5
+HEAD is now at 5545ed5 Added Line 1 in file3.txt
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+nothing to commit, working tree clean
+jegan@tektutor.org:~/git-demo$ git log --oneline
+5545ed5 (HEAD -> main) Added Line 1 in file3.txt
+41b8335 Added Line 2 in file2.txt
+7d47706 Added Line 1 in file2.txt
+155e471 Added Line 1 in file1.txt
+cbdcb8d Initial commit.
+jegan@tektutor.org:~/git-demo$ cat file3.txt 
+Line 1
 </pre>
