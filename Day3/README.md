@@ -70,7 +70,7 @@ Changes to be committed:
 	modified:   file3.txt
 </pre>    
 
-#### Performing a soft reset
+#### Performing a hard reset
 
 <pre>
 jegan@tektutor.org:~/git-demo$ git status
