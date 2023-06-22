@@ -183,3 +183,59 @@ f4ea00b Added BMW X1
 19bd207 Initial commit. 
 </pre>
 
+#### Creating annotated tags and listing them
+```
+git log --oneline
+git tag -a v0.1 19bd207 -m "Dev release v0.1"
+git tag -a v0.2 f4ea00b -m "Dev release v0.2"
+git tag -a v0.3 31c912e -m "Dev release v0.3"
+git tag -a v0.4 6e73019 -m "Dev release v0.4"
+git tag -a v0.5 5044009 -m "Dev release v0.5"
+
+git tag # This will list the tags
+git log --oneline  # This will list a single line log along with tags(if any)
+```
+
+Expected output
+<pre>
+ 
+jegan@tektutor.org:~/git-demo$ git tag -a v0.1 19bd207 -m "Dev release v0.1"
+jegan@tektutor.org:~/git-demo$ git tag -a v0.2 f4ea00b -m "Dev release v0.2"
+jegan@tektutor.org:~/git-demo$ git tag -a v0.3 31c912e -m "Dev release v0.3"
+jegan@tektutor.org:~/git-demo$ git tag -a v0.4 6e73019 -m "Dev release v0.4"
+jegan@tektutor.org:~/git-demo$ git tag -a v0.5 5044009 -m "Dev release v0.5"
+ 
+jegan@tektutor.org:~/git-demo$ git tag
+v0.1
+v0.2
+v0.3
+v0.4
+v0.5
+ 
+jegan@tektutor.org:~/git-demo$ git log --oneline
+5044009 (HEAD -> main, tag: v0.5) Added BMW X4
+6e73019 (tag: v0.4) Added BMW X3
+31c912e (tag: v0.3) Added BMW X2
+f4ea00b (tag: v0.2) Added BMW X1
+19bd207 (tag: v0.1) Initial commit.
+</pre>
+
+
+#### Deleting the tags
+```
+git tag -d v0.1
+git tag -d v0.2 v0.3 v0.4 v0.5
+
+git tag
+git log --oneline
+```
+
+<pre>
+jegan@tektutor.org:~/git-demo$ git tag -d v0.1
+Deleted tag 'v0.1' (was 952ac8c)
+jegan@tektutor.org:~/git-demo$ git tag -d v0.2 v0.3 v0.4 v0.5
+Deleted tag 'v0.2' (was 291d775)
+Deleted tag 'v0.3' (was 5265ba9)
+Deleted tag 'v0.4' (was 2002c00)
+Deleted tag 'v0.5' (was 7397bdc)
+</pre>
