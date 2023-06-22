@@ -47,7 +47,7 @@ git commit -am "Added Line 3 in file3.txt"
 git log --oneline
 ```
 
-
+Expected output
 <pre>
 918df8a (HEAD -> main) Added Line 3 in file3.txt
 d3f5fe4 Added Line 2 in file3.txt
@@ -86,7 +86,10 @@ cbdcb8d Initial commit.
 jegan@tektutor.org:~/git-demo$ cat file3.txt 
 Line 1
 Line 2
-  
+</pre>
+
+Expected output
+<pre>
 jegan@tektutor.org:~/git-demo$ git reset --hard 5545ed5
 HEAD is now at 5545ed5 Added Line 1 in file3.txt
 jegan@tektutor.org:~/git-demo$ git status
