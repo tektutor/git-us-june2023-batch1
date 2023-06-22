@@ -8,7 +8,7 @@ Git reset supports two modes
 
 Soft reset will undo the changes, commits the changes and retains your old changes in the staging area.  We need to keep in mind that reset command will modify the commit history.
 
-Hard reset will undo the changes and straight will commit the changes by modifying the commit history without any further warning.
+Hard reset will undo the changes and straight away it will commit the changes by modifying the commit history without any further warning.
 
 
 #### Performing a soft reset
