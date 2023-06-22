@@ -106,4 +106,53 @@ Git supports two types of tags
 1. Lightweight tag - Git doesn't require creating a separated for lightweight tags
 2. Annotated tag - recommended - 
 
+Creating a lightweight tag
+```
+git log --oneline
+git tag v0.1 19bd207 #Creates a lightweight tag
+git tag v0.2 f4ea00b 
+git tag v0.3 31c912e
+git tag v0.4 6e73019
+git tag v0.5 5044009
+
+git log --oneline
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git tag v0.1 19bd207
+jegan@tektutor.org:~/git-demo$ git tag v0.2 f4ea00b
+jegan@tektutor.org:~/git-demo$ git tag v0.3 31c912e
+jegan@tektutor.org:~/git-demo$ git tag v0.4 6e73019
+jegan@tektutor.org:~/git-demo$ git tag v0.5 5044009
+jegan@tektutor.org:~/git-demo$ git log --oneline
+5044009 (HEAD -> main, tag: v0.5) Added BMW X4
+6e73019 (tag: v0.4) Added BMW X3
+31c912e (tag: v0.3) Added BMW X2
+f4ea00b (tag: v0.2) Added BMW X1
+19bd207 (tag: v0.1) Initial commit.
+jegan@tektutor.org:~/git-demo$ git tag
+v0.1
+v0.2
+v0.3
+v0.4
+v0.5
+jegan@tektutor.org:~/git-demo$ git tag -d v0.1
+Deleted tag 'v0.1' (was 19bd207)
+jegan@tektutor.org:~/git-demo$ git tag -d v0.2
+Deleted tag 'v0.2' (was f4ea00b)
+jegan@tektutor.org:~/git-demo$ git tag -d v0.3
+Deleted tag 'v0.3' (was 31c912e)
+jegan@tektutor.org:~/git-demo$ git tag -d v0.4
+Deleted tag 'v0.4' (was 6e73019)
+jegan@tektutor.org:~/git-demo$ git tag -d v0.5
+Deleted tag 'v0.5' (was 5044009)
+jegan@tektutor.org:~/git-demo$ git tag
+jegan@tektutor.org:~/git-demo$ git log --oneline
+5044009 (HEAD -> main) Added BMW X4
+6e73019 Added BMW X3
+31c912e Added BMW X2
+f4ea00b Added BMW X1
+19bd207 Initial commit. 
+</pre>
 
