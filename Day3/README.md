@@ -17,6 +17,11 @@ cd ~/git-demo
 rm -rf .git
 rm *
 
+git config --global init.defaultbranch main
+git config --global core.autocrlf true
+git config --global -l
+git init
+
 touch file1.txt file2.txt file3.txt
 git add *
 git commit -m "Initial commit."
