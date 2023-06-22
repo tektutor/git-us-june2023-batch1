@@ -106,7 +106,7 @@ Git supports two types of tags
 1. Lightweight tag - Git doesn't require creating a separated for lightweight tags
 2. Annotated tag - recommended - 
 
-Creating a lightweight tag
+#### Creating a lightweight tag
 ```
 git log --oneline
 git tag v0.1 19bd207 #Creates a lightweight tag
@@ -131,12 +131,37 @@ jegan@tektutor.org:~/git-demo$ git log --oneline
 31c912e (tag: v0.3) Added BMW X2
 f4ea00b (tag: v0.2) Added BMW X1
 19bd207 (tag: v0.1) Initial commit.
+
+
+#### Listing tags
+```
+git log --oneline
+git tag
+```
+
+Expected output
+<pre> 
 jegan@tektutor.org:~/git-demo$ git tag
 v0.1
 v0.2
 v0.3
 v0.4
 v0.5
+
+#### Deleting tags
+```
+git tag -d v0.1
+git tag -d v0.2
+git tag -d v0.3
+git tag -d v0.4
+git tag -d v0.5
+ 
+git tag
+git log --oneline
+```
+
+Expected output
+<pre>
 jegan@tektutor.org:~/git-demo$ git tag -d v0.1
 Deleted tag 'v0.1' (was 19bd207)
 jegan@tektutor.org:~/git-demo$ git tag -d v0.2
