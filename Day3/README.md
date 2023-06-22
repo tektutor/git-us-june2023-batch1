@@ -57,7 +57,7 @@ d3f5fe4 Added Line 2 in file3.txt
 155e471 Added Line 1 in file1.txt
 cbdcb8d Initial commit.
 
-jegan@tektutor.org:~/git-demo$ <b></b>git reset --soft d3f5fe4</b>
+jegan@tektutor.org:~/git-demo$ <b>git reset --soft d3f5fe4</b>
 jegan@tektutor.org:~/git-demo$ cat file3.txt 
 Line 1
 Line 2
