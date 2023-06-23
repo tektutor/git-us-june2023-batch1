@@ -180,3 +180,15 @@ cat file3.txt
 
 git log --oneline
 ```
+
+Finding the currently active branch.  The active branch is shown in green color and the branch name is preceded with "*".
+```
+git branch
+```
+
+Switch back to dev-1.0 branch
+```
+git checkout dev-1.0
+git status
+ls
+```
