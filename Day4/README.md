@@ -1,6 +1,6 @@
 # Day 4
 
-## Git soft reset
+## ⛹️ Lab - Git soft reset
 
 ```
 cd ~/git-demo
@@ -171,7 +171,7 @@ On branch main
 nothing to commit, working tree clean
 </pre>
 
-## Git hard reset
+## ⛹️ Lab - Git hard reset
 ```
 cd ~/git-demo
 rm -rf .git
