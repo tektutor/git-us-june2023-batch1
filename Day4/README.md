@@ -170,3 +170,145 @@ jegan@tektutor.org:~/git-demo$ git status
 On branch main
 nothing to commit, working tree clean
 </pre>
+
+## Git hard reset
+```
+cd ~/git-demo
+rm -rf .git
+rm *
+
+git init
+touch file1.txt
+git status
+git add file1.txt 
+git commit -m "Initial commit."
+git status
+cat file1.txt
+
+
+echo "Line 1" > file1.txt
+git commit -am "Added Line 1"
+
+echo "Line 2" >> file1.txt
+git commit -am "Added Line 2"
+
+echo "Line 2" >> file1.txt
+git commit -am "Added Line 3"
+
+echo "Line 3" >> file1.txt
+git commit -am "Added Line 3"
+
+echo "Line 4" >> file1.txt
+git commit -am "Added Line 4"
+
+echo "Line 5" >> file1.txt
+git commit -am "Added Line 5"
+
+cat file1.txt
+git status
+git log --oneline
+
+git reset --hard eb93559
+git status
+git log --oneline
+cat file1.txt
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git init
+Initialized empty Git repository in /home/jegan/git-demo/.git/
+jegan@tektutor.org:~/git-demo$ touch file1.txt
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+jegan@tektutor.org:~/git-demo$ git add file1.txt 
+jegan@tektutor.org:~/git-demo$ git commit -m "Initial commit."
+[main (root-commit) 20583cb] Initial commit.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+nothing to commit, working tree clean
+	  
+jegan@tektutor.org:~/git-demo$ cat file1.txt 
+jegan@tektutor.org:~/git-demo$ echo "Line 1" > file1.txt 
+jegan@tektutor.org:~/git-demo$ git commit -am "Added Line 1"
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+[main 7dc438e] Added Line 1
+ 1 file changed, 1 insertion(+)
+	  
+jegan@tektutor.org:~/git-demo$ echo "Line 2" >> file1.txt 
+jegan@tektutor.org:~/git-demo$ git commit -am "Added Line 2"
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+[main 9c7b898] Added Line 2
+ 1 file changed, 1 insertion(+)
+	  
+jegan@tektutor.org:~/git-demo$ echo "Line 3" >> file1.txt 
+jegan@tektutor.org:~/git-demo$ git commit -am "Added Line 3"
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+[main b9ea26d] Added Line 3
+ 1 file changed, 1 insertion(+)
+	  
+jegan@tektutor.org:~/git-demo$ echo "Line 4" >> file1.txt 
+jegan@tektutor.org:~/git-demo$ git commit -am "Added Line 4"
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+[main eb93559] Added Line 4
+ 1 file changed, 1 insertion(+)
+	  
+jegan@tektutor.org:~/git-demo$ echo "Line 5" >> file1.txt 
+jegan@tektutor.org:~/git-demo$ git commit -am "Added Line 5"
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+[main 7a6fe75] Added Line 5
+ 1 file changed, 1 insertion(+)
+	  
+jegan@tektutor.org:~/git-demo$ cat file1.txt 
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+	  
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+nothing to commit, working tree clean
+	  
+jegan@tektutor.org:~/git-demo$ git log --oneline
+7a6fe75 (HEAD -> main) Added Line 5
+eb93559 Added Line 4
+b9ea26d Added Line 3
+9c7b898 Added Line 2
+7dc438e Added Line 1
+20583cb Initial commit.
+	  
+jegan@tektutor.org:~/git-demo$ git reset --hard eb93559
+HEAD is now at eb93559 Added Line 4
+jegan@tektutor.org:~/git-demo$ git status
+On branch main
+nothing to commit, working tree clean
+	  
+jegan@tektutor.org:~/git-demo$ git log --oneline
+eb93559 (HEAD -> main) Added Line 4
+b9ea26d Added Line 3
+9c7b898 Added Line 2
+7dc438e Added Line 1
+20583cb Initial commit.
+	  
+jegan@tektutor.org:~/git-demo$ cat file1.txt 
+Line 1
+Line 2
+Line 3
+Line 4
+</pre>
