@@ -121,3 +121,64 @@ git commit --amend - to make small corrections in the recent commit
 git restore - to undo changes done in a commit, requires an extra commit 
 git reset - to undo changes done in a commit with an extra commit
 </pre>
+
+# Git Branches
+
+## Creating a new branch called dev-1.0 from main branch
+
+Let us check the log in the main branch
+```
+cd ~/git-demo
+git log --oneline
+ls
+cat file1.txt
+cat file2.txt
+cat file3.txt
+```
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git log --oneline
+5545ed5 (HEAD -> main) Added Line 1 in file3.txt
+41b8335 Added Line 2 in file2.txt
+7d47706 Added Line 1 in file2.txt
+155e471 Added Line 1 in file1.txt
+cbdcb8d Initial commit.
+</pre>
+
+Let us create the dev-1.0 branch from main branch
+```
+git checkout -b dev-1.0
+ls
+cat file1.txt
+cat file2.txt
+cat file3.txt
+
+git log --oneline
+
+touch file4.txt
+echo "Enhancement - User Story 123" > file4.txt
+git add file4.txt
+git commit -m "Added Enhancement - User Story 123" 
+
+echo "BUGFIX 235434" >> file3.txt
+git add file3.txt
+git commit -m "Fixed BUG - BUG235434"
+
+git log --oneline
+```
+
+Switch to main branch
+
+Observe file4.txt doesn't exist in the main branch
+```
+git checkout main
+ls
+cat file1.txt
+cat file2.txt
+cat file3.txt
+
+git log --oneline
+```
+
+
