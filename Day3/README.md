@@ -104,3 +104,20 @@ cbdcb8d Initial commit.
 jegan@tektutor.org:~/git-demo$ cat file3.txt 
 Line 1
 </pre>
+
+
+## Summary
+<pre>
+git clone - to download the latest code from remote GitHub repo to local repo
+git pull - to download only the delta changes done in remote GitHub repo to your local repo
+git init - to create an empty local repository
+git status - to check the status of your local repo
+git add - to add your changes to the staging area
+git commit - to checkin your changes to the local repo
+git log - to show the log/commit history
+git tag - to add human friendly tags to the commid id
+git diff - to observe the diff between two files
+git commit --amend - to make small corrections in the recent commit
+git restore - to undo changes done in a commit, requires an extra commit 
+git reset - to undo changes done in a commit with an extra commit
+</pre>
