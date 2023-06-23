@@ -192,3 +192,73 @@ git checkout dev-1.0
 git status
 ls
 ```
+
+## ⛹️‍♀️ Lab - Checking diff between two commits
+```
+cd ~/git-demo
+git branch
+git checkout dev-1.0
+git log --oneline
+
+git diff cbdcb8d 155e471
+git diff cbdcb8d 7d47706
+git diff 5545ed5 3076833  #This compares the changes done in dev-1.0 and main branch
+``` 
+
+Expected output
+<pre>
+jegan@tektutor.org:~/git-demo$ git branch
+* dev-1.0
+  main
+jegan@tektutor.org:~/git-demo$ git log --oneline
+3076833 (HEAD -> dev-1.0) Added User story - ENC466123
+e4b2b6c Added Enhancement - EN345432
+f0a6d42 Added Enhancement - EN124234
+5545ed5 (main) Added Line 1 in file3.txt
+41b8335 Added Line 2 in file2.txt
+7d47706 Added Line 1 in file2.txt
+155e471 Added Line 1 in file1.txt
+cbdcb8d Initial commit.
+jegan@tektutor.org:~/git-demo$ git diff cbdcb8d 155e471
+diff --git a/file1.txt b/file1.txt
+index e69de29..3be9c81 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -0,0 +1 @@
++Line 1
+jegan@tektutor.org:~/git-demo$ git diff cbdcb8d 7d47706
+diff --git a/file1.txt b/file1.txt
+index e69de29..3be9c81 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -0,0 +1 @@
++Line 1
+diff --git a/file2.txt b/file2.txt
+index e69de29..3be9c81 100644
+--- a/file2.txt
++++ b/file2.txt
+@@ -0,0 +1 @@
++Line 1
+jegan@tektutor.org:~/git-demo$ git diff 5545ed5 3076833
+diff --git a/file1.txt b/file1.txt
+index 3be9c81..e1001fd 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1,2 @@
+ Line 1
++Enhancement - user story2
+diff --git a/file3.txt b/file3.txt
+index 3be9c81..8f394db 100644
+--- a/file3.txt
++++ b/file3.txt
+@@ -1 +1,2 @@
+ Line 1
++Enhancement - user story1
+diff --git a/file4.txt b/file4.txt
+new file mode 100644
+index 0000000..e9bc72b
+--- /dev/null
++++ b/file4.txt
+@@ -0,0 +1 @@
++Added User story - ENC466123
+</pre>
