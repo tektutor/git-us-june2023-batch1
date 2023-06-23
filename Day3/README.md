@@ -124,7 +124,7 @@ git reset - to undo changes done in a commit with an extra commit
 
 # Git Branches
 
-## Creating a new branch called dev-1.0 from main branch
+## ⛹️‍♀️ Lab - Creating a new branch called dev-1.0 from main branch
 
 Let us check the log in the main branch
 ```
@@ -180,5 +180,3 @@ cat file3.txt
 
 git log --oneline
 ```
-
-
