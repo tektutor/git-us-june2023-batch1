@@ -354,10 +354,10 @@ git log --oneline
 
 We can make some changes in the dev-1.0
 ```
-echo "Line 4" > file1.txt
+echo "Line 4" >> file1.txt
 git commit -am "Added Line 4"
 
-echo "Line 5" > file1.txt
+echo "Line 5" >> file1.txt
 git commit -am "Added Line 5"
 
 git status
