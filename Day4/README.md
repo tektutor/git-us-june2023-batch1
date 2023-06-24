@@ -312,3 +312,69 @@ Line 2
 Line 3
 Line 4
 </pre>
+
+
+## Lab - Git merge - Fast Forward
+
+Let's cleanup any existing repo 
+```
+cd ~/git-demo
+rm -rf .git
+rm *
+```
+
+Let's create a new main repo
+```
+git config --global init.defaultbranch main
+git init
+touch file1.txt
+git add file1.txt
+git commit -m "Initial commit."
+
+echo "Line 1" > file1.txt
+git commit -am "Added Line 1"
+
+echo "Line 2" > file1.txt
+git commit -am "Added Line 2"
+
+echo "Line 3" > file1.txt
+git commit -am "Added Line 3"
+
+git status
+git log --oneline
+```
+
+We can create the dev-1.0 branch from main branch
+```
+git branch
+git checkout main
+git checkout -b dev-1.0
+git log --oneline
+```
+
+We can make some changes in the dev-1.0
+```
+echo "Line 4" > file1.txt
+git commit -am "Added Line 4"
+
+echo "Line 5" > file1.txt
+git commit -am "Added Line 5"
+
+git status
+git log --oneline
+```
+
+Let's switch to main branch and see the content of file1.txt
+```
+git checkout main
+cat file1.txt
+git log --oneline
+```
+
+Let's merge the changes done in dev-1.0 branch to the main branch
+```
+git merge dev-1.0
+git log --oneline
+cat file1.txt
+```
+
