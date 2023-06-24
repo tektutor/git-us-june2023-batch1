@@ -347,8 +347,8 @@ git log --oneline
 We can create the dev-1.0 branch from main branch
 ```
 git branch
-git checkout main
-git checkout -b dev-1.0
+git checkout main  # This will switch to main branch
+git checkout -b dev-1.0 # This will create a new branch dev-1.0
 git log --oneline
 ```
 
