@@ -314,7 +314,7 @@ Line 4
 </pre>
 
 
-## Lab - Git merge - Fast Forward
+## ⛹️ Lab - Git merge - Fast Forward
 
 Let's cleanup any existing repo 
 ```
